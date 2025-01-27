@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Project</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <div class="container-fluid bg-dark">
+      <div class="row justify-content-between align-items-center py-2">
+        <!-- Call Now Section -->
+        <div class="col-12 col-md-6 d-flex text-md-start call-now">
+          <i class="bi bi-headset"></i>
+          <h4 class="mb-0">CALL NOW!</h4>
+          <span>+91 987-654-321</span>
+        </div>
+
+        <!-- Account, Language, Currency Section -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <!-- Account Dropdown -->
+          <div class="d-inline-block dropdown me-4">
+            <button
+              class="dropdown-toggle"
+              type="button"
+              id="accountDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              My Account
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+              <li><a class="dropdown-item" href="#">Register</a></li>
+              <li><a class="dropdown-item" href="#">Log In</a></li>
+              <li><a class="dropdown-item" href="#">Wishlist (0)</a></li>
+              <li><a class="dropdown-item" href="#">Checkout</a></li>
+            </ul>
+          </div>
+
+          <!-- Language Dropdown -->
+          <div class="d-inline-block dropdown me-4">
+            <button
+              class="dropdown-toggle"
+              type="button"
+              id="languageDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Language
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Arabic</a></li>
+            </ul>
+          </div>
+
+          <!-- Currency Dropdown -->
+          <div class="d-inline-block dropdown">
+            <button
+              class="dropdown-toggle"
+              type="button"
+              id="currencyDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Currency
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
+              <li><a class="dropdown-item" href="#">&#8364; Euro</a></li>
+              <li>
+                <a class="dropdown-item" href="#">&#163; Pound Sterling</a>
+              </li>
+              <li><a class="dropdown-item" href="#">$ US Dollar</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search and Wishlist Section -->
+    <div class="container-fluid bg-light py-3">
+      <div class="row align-items-center">
+        <!-- Search Field -->
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-transparent"
+              type="button"
+              style="
+                border: 1px solid rgba(128, 128, 128, 0.187);
+                background-color: transparent;
+              "
+            >
+              <i class="bi bi-search" style="color: black"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Theme Icon -->
+        <div
+          class="col-12 col-md-4 mb-3 mb-md-0 theme-icon d-flex justify-content-center"
+        >
+          <img
+            src="./img/logo.png"
+            alt="Theme Icon"
+            class="img-fluid"
+            style="width: 50%"
+          />
+        </div>
+
+        <!-- Wish Items -->
+        <div class="col-12 col-md-4 text-md-end">
+          <div class="d-flex justify-content-end align-items-center wish-items">
+            <i class="bi bi-cart" style="font-size: 2rem" id="items-icon"></i>
+            <div class="d-flex flex-column align-items-center">
+              <h1
+                class="d-inline-block ms-2 mb-0"
+                style="font-size: 1.5rem; font-weight: 700"
+              >
+                Shopping Cart
+              </h1>
+              <span class="d-inline-block ms-2" style="font-size: 1rem"
+                >(0)</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="container-fluid bg-light py-3">
+      <div class="row justify-content-around">
+        <div class="col-12 col-md-9 header-2 p-4">
+          <ul class="nav-links d-flex justify-content-between m-0 p-0">
+            <li class="nav-item"><a href="#Home" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="#Women" class="nav-link">Women</a>
+            </li>
+            <li class="nav-item"><a href="#Kids" class="nav-link">Kids</a></li>
+            <li class="nav-item"><a href="#Men" class="nav-link">Men</a></li>
+            <li class="nav-item">
+              <a href="#Living" class="nav-link">Home & Living</a>
+            </li>
+            <li class="nav-item">
+              <a href="#Clothes" class="nav-link">Designer Clothes</a>
+            </li>
+            <li class="nav-item"><a href="#Blog" class="nav-link">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Section -->
+    <div id="Home">
+      <div class="carsoul-container">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/baner-1.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./img/baner-2.jpg" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Women Section -->
+    <div id="Women">
+      <div class="container-fluid py-3">
+        <div class="row Women-container">
+          <div class="col-12 col-md-3 mb-4">
+            <div class="women-container-right">
+              <div class="row inner-container">
+                <div class="col-12 text-center parent-container">
+                  <div class="image-container">
+                    <img
+                      src="./img/cp.jpg"
+                      alt="Hat Image"
+                      class="product-image img-fluid mt-3"
+                    />
+                    <div class="overlay">
+                      <div class="product-details">
+                        <button class="btn btn-dark">VIEW PRODUCT</button>
+                        <h5 class="product-title mt-3">HATS & CAPS</h5>
+                        <span class="product-description text-danger"
+                          >WIDE VARIETY OF SIZES, COLORS</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3 inner-container">
+                <div class="col-12 text-center parent-container">
+                  <div class="image-container">
+                    <img
+                      src="./img/clth.jpg"
+                      alt="Hat Image"
+                      class="product-image img-fluid mt-3"
+                    />
+                    <div class="overlay">
+                      <div class="product-details">
+                        <button class="btn btn-dark">VIEW PRODUCT</button>
+                        <h5 class="product-title mt-3">HATS & CAPS</h5>
+                        <span class="product-description text-danger"
+                          >WIDE VARIETY OF SIZES, COLORS</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-12 col-md-4 mb-4 middel-img">
+            <div class="row">
+              <div class="col-12">
+                <img
+                  src="./img/center-gl.jpg"
+                  alt="Image 3"
+                  class="img-fluid"
+                />
+                <div class="overlay-gl"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-12 col-md-3 mb-4">
+            <div class="women-container-left">
+              <div class="row inner-container">
+                <div class="col-12 text-center parent-container">
+                  <div class="image-container">
+                    <img
+                      src="./img/bg.jpg"
+                      alt="Hat Image"
+                      class="product-image img-fluid mt-3"
+                    />
+                    <div class="overlay">
+                      <div class="product-details">
+                        <button class="btn btn-dark">VIEW PRODUCT</button>
+                        <h5 class="product-title mt-3">HATS & CAPS</h5>
+                        <span class="product-description text-danger"
+                          >WIDE VARIETY OF SIZES, COLORS</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3 inner-container">
+                <div class="col-12 text-center parent-container">
+                  <div class="image-container">
+                    <img
+                      src="./img/wears.jpg"
+                      alt="Hat Image"
+                      class="product-image img-fluid mt-3"
+                    />
+                    <div class="overlay">
+                      <div class="product-details">
+                        <button class="btn btn-dark">VIEW PRODUCT</button>
+                        <h5 class="product-title mt-3">HATS & CAPS</h5>
+                        <span class="product-description text-danger"
+                          >WIDE VARIETY OF SIZES, COLORS</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Sections -->
+    <div id="Kids">
+      <div class="container my-5">
+        <!-- Header Section -->
+        <h2 class="mb-3">FASHION ITEMS</h2>
+        <div class="category-menu mb-4">
+          <a href="#" class="active">LATEST</a>
+          <a href="#">SPECIAL</a>
+          <a href="#">BESTSELLER</a>
+        </div>
+
+        <!-- Carousel Section -->
+        <div
+          id="productCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carsoul-container">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div
+                  class="carousel-item active d-flex justify-content-around gap-3"
+                >
+                  <div class="col-lg-3 col-md-6">
+                    <img
+                      src="./img/jacket.jpg"
+                      alt="Jacket"
+                      class="img-fluid"
+                    />
+                    <div
+                      class="Stars"
+                      style="--rating: 2.3"
+                      aria-label="Rating of this product is 2.3 out of 5."
+                    ></div>
+                    <p class="product-title">Nike Hoodies</p>
+                    <p class="product-price">$541.99</p>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <img src="./img/watch.jpg" alt="Jacket" class="img-fluid" />
+                    <div
+                      class="Stars"
+                      style="--rating: 2.3"
+                      aria-label="Rating of this product is 2.3 out of 5."
+                    ></div>
+                    <p class="product-title">Wrist watches</p>
+                    <p class="product-price">$201.34</p>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <img
+                      src="./img/06-280x350.jpg"
+                      alt="Jacket"
+                      class="img-fluid"
+                    />
+                    <div
+                      class="Stars"
+                      style="--rating: 2.3"
+                      aria-label="Rating of this product is 2.3 out of 5."
+                    ></div>
+                    <p class="product-title">Skarf duke black</p>
+                    <p class="product-price">$241.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white py-4">
+      <!-- Top Section: Logo and Info -->
+      <div class="container">
+        <div class="row align-items-center mb-4">
+          <!-- Logo Section -->
+          <div class="col-md-3">
+            <div class="footer-logo">
+              <img src="./img/footer-logo.png" alt="Footer Logo" class="img-fluid">
+            </div>
+          </div>
+          <!-- Information Section -->
+          <div class="col-md-9">
+            <p class="mb-0">© 2025 TheMini - Where Style Meets Comfort. Shop with confidence, always!</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Links Section -->
+      <div class="container">
+        <div class="row">
+          <!-- Information Section -->
+          <div class="col-md-3">
+            <h4 class="content-title">Information</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Delivery Information</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+            </ul>
+          </div>
+    
+          <!-- Customer Service Section -->
+          <div class="col-md-3">
+            <h4 class="content-title">Customer Service</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">Returns</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Site Map</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Wish List</a></li>
+              <li><a href="#" class="text-white text-decoration-none">My Account</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Order History</a></li>
+            </ul>
+          </div>
+    
+          <!-- Extras Section -->
+          <div class="col-md-3">
+            <h4 class="content-title">Extras</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">Brands</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Gift Certificates</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Affiliate</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Specials</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Newsletter</a></li>
+            </ul>
+          </div>
+    
+          <!-- Contact Section -->
+          <div class="col-md-3">
+            <h4 class="content-title">Contacts</h4>
+            <ul class="list-unstyled">
+              <li>Warehouse & Offices,</li>
+              <li>12345 Street name, California USA</li>
+              <li>Email: <a href="mailto:info@customdesign.com" class="text-white text-decoration-none">info@customdesign.com</a></li>
+              <li>Phone: (+91) 12-3456-7890</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+    <script src="./functionality.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
